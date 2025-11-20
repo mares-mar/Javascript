@@ -2,8 +2,15 @@
 // Uloha: Spočítej součet dvou čísel zadaných uživatelem
 // Požádej uživatele o dvě čísla pomocí `prompt()` a vypiš jejich součet do konzole.
  
-console.log("Zadej číslo");
+let cislo = Number(prompt("Zadej cislo 1"));
 
+let cislo2 = Number(prompt("Zadej cislo 2"));
+
+let Vysledek = cislo + cislo2;
+
+console.log(`Vysledek ${cislo} + ${cislo2} = ${Vysledek}`);
+
+console.log(typeof cislo);
  
 /*****************************************************************/
 // Uloha: Zjisti, zda je číslo sudé nebo liché
@@ -12,7 +19,15 @@ console.log("Zadej číslo");
     Výsledek zapiš do konzole.
 */
  
-// zde bude tvoje řešení
+let cislo_s_l = Number(prompt("Zadej cislo pro sudé liché"));
+
+if(cislo_s_l === 0)
+    console.log("Cislo je Nula");
+else if (cislo_s_l % 2 == 0)
+    console.log("Cislo je sudé");
+else
+    console.log("Cislo je liché");
+
  
  
 /*****************************************************************/
@@ -22,7 +37,11 @@ console.log("Zadej číslo");
     Vzorec: `F = C * 9/5 + 32`
 */
  
-// zde bude tvoje řešení
+let cislo_celsia = Number(prompt("Zadej teplotu v celsiích"));
+
+let F = cislo_celsia * 9/5 +32;
+
+console.log(`Stupnu celsia ${cislo_celsia}°C ve Farenheitech ${F}°F`);
  
  
 /*****************************************************************/
@@ -32,7 +51,14 @@ console.log("Zadej číslo");
     - číslo je kladné, záporné či je nula
 */
  
-// zde bude tvoje řešení
+let cislo_k_z_n = Number(prompt("Zadej číslo pro kladné záporné a nula"));
+
+if(cislo_k_z_n === 0)
+    console.log(` Cislo ${cislo_k_z_n} je nula`);
+else if(cislo_k_z_n > 0)
+    console.log(` Cislo ${cislo_k_z_n} je kladné`);
+else if(cislo_k_z_n < 0)
+    console.log(` Cislo ${cislo_k_z_n} je záporné`);
  
  
 /*****************************************************************/
@@ -42,7 +68,12 @@ console.log("Zadej číslo");
 * zda slovo obsahuje písmeno "a". Vypiš do konzole
 */
  
-// zde bude tvoje řešení
+let slovo = prompt("Zadej slovo");
+
+if (slovo.includes("a"))
+    console.log(`Slovo ${slovo} obsahuje a`);
+else
+    console.log(`Slovo ${slovo} neobsahuje a`);
  
  
 /*****************************************************************/
@@ -52,6 +83,13 @@ console.log("Zadej číslo");
 * Použij .include() nad zadaným slovem. Vypiš do konzole.
 */
  
+
+let slovo_i = prompt("Zadej slovo");
+
+let zacatek = "a";
+
+
+
 /*****************************************************************/
 // 6️⃣ Zjisti, zda zadané číslo je prvočíslo
 /**
@@ -59,7 +97,9 @@ console.log("Zadej číslo");
 * zda je číslo prvočíslo či nikoliv.
 */
  
-// zde bude tvoje řešení
+let prvocislo = Number(prompt("Zadej cislo pro provocislo"));
+
+
  
  
 /*****************************************************************/
