@@ -86,8 +86,21 @@ else
 
 let slovo_i = prompt("Zadej slovo");
 
-let zacatek = "a";
+let pismena = ['a','b','c','d','e','f','g','h','i','j'];
 
+for( let pismeno of pismena)
+{
+    let pocet = 0;
+    for(let znak of slovo_i)
+    {
+        if(znak === pismeno){
+            pocet++;
+        }
+    }
+    if(pocet > 0){
+        console.log(`Pismeno ${pismeno} je zastoupeno počtem ${pocet}`);
+    }
+}
 
 
 /*****************************************************************/

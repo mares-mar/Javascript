@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="cs-cz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <p id="test"></p>
+    <script>
+
+        let budova = {
+            výška: 135,
+            patra: 20,
+            nazev: "budova",
+            bool: true
+
+        }
+
+        console.log(budova.patra);
+        console.log(budova.nazev);
+        console.log(budova.bool);
+
+        document.getElementById("test").innerHTML = budova.nazev;
+
+        
+
+        budova.majitel = "CPI";
+
+        console.log(budova);
+
+        const keys2 = Object.keys(budova);
+
+        console.log(keys2);
+
+
+        console.log(budova[keys2[0]])
+    </script>
+
+
+
+</body>
+</html>

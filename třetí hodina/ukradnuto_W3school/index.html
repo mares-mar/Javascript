@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>Bracket Indexing</h2>
+
+<p>JavaScript array elements are accessed using numeric indexes (starting from 0).</p>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+
+
+<input type="text" value="hodnota" id="in1">
+<script>
+const cars = ["Saab", "Volvo", "BMW"];
+cars.push("Auto 1");
+cars.push("Auto 2");
+cars.push("Auto 3");
+cars.push("Auto 4");
+cars.pop();
+cars.pop();
+cars.pop();
+var array2 = cars.map((v,ind) => v + " a " + ind)
+//cars.shift();
+//cars.shift();
+//cars.unshift();
+//map{(hodnota,ind) => {příkaz1, return příkaz}
+
+
+
+
+document.getElementById("demo").innerHTML = cars;
+document.getElementById("in1").value = "cars aaaa";
+
+document.getElementById("demo2").innerHTML = array2;
+
+
+
+
+</script>
+
+</body>
+</html>
+
