@@ -55,20 +55,45 @@ Cas();
 
 let barva = "yellow";
 document.getElementById("btn34").addEventListener("click",() => document.body.style.backgroundColor = barva );
+
 /* 35) Po najetí myší na obrázek ho zvětši.
       - Použij eventy mouseover a mouseout.
       - Změnu proveď pomocí třídy v CSS nebo style.width v JS.
 */
+
+const img = document.getElementById("img35");
+
+img.addEventListener("mouseover", () => img.classList.add("zvetseni"));
+
+img.addEventListener("mouseout", function() {img.classList.remove("zvetseni")});
+
+/* img.addEventListener("mouseover". function(){img.style.width = "400px"}) */
 
 /* 36) Po odeslání formuláře vypiš hodnoty inputů do konzole.
       - Zakázat přirozené odeslání formuláře pomocí event.preventDefault().
       - Použij funkci, která načte hodnoty inputů.
 */
 
+ 
+
+document.getElementById("form36").addEventListener("submit", (event) => {event.preventDefault();vypisHodnot();});
+
+function vypisHodnot() {
+    jmeno = document.getElementById("name36");
+    email = document.getElementById("email36");
+    
+    console.log(`Jmeno: ${jmeno.value} \nEmail: ${email.value}`);
+}
 /* 37) Vytvoř jednoduché „počítadlo kliknutí“.
       - Po každém kliknutí zvýší číslo o 1 a zobraz ho v HTML.
       - Proměnná se musí nacházet ve správném scope.
 */
+
+let pocet_klinuti = 0;
+
+document.getElementById("btn37").addEventListener("click", function(){pocet_klinuti++; 
+      document.getElementById("counter37").textContent = pocet_klinuti;
+})
 
 /* 38) Po kliknutí na tlačítko skryj nebo zobraz text.
       - Můžeš použít classList.toggle().
