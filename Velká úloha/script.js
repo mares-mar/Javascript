@@ -100,15 +100,57 @@ document.getElementById("btn37").addEventListener("click", function(){pocet_klin
       - Zvaž použití anonymní nebo arrow funkce.
 */
 
+
+
+function zmena_textu()
+{
+      const text = document.getElementById("text38");
+      
+
+      if(text.style.display == "block")
+      {
+            text.style.display = "none";
+      }
+      else text.style.display = "block";
+}
+      
+document.getElementById("btn38").addEventListener("click", zmena_textu);
+
 /* 39) Validuj formulář – zkontroluj, jestli je vyplněné jméno a e-mail.
       - Pokud není validní, zobraz chybovou hlášku.
       - Použij jednoduchou podmínku a funkci validateForm().
 */
 
+document.getElementById("form39").addEventListener("submit",(event) => {event.preventDefault();
+      validateForm()})
+
+
+function validateForm(){
+
+      
+      jmeno = document.getElementById("name39");
+      email = document.getElementById("email39");
+
+      if(jmeno.value == "" || jmeno.value.length < 3 )
+      {
+            alert("Jméno není správné");
+      }
+      else if (!(email.value.includes("@") & email.value.includes(".")))
+      {
+            alert("Email není správný");
+      }
+}
 /* 40) Pomocí slideru (input type="range") měň velikost písma textu.
       - Po změně hodnoty aktualizuj style.fontSize.
       - Hodnota ze slideru bude vstupním parametrem funkce.
 */
+
+
+let hodnota = document.getElementById("slider40").value;
+
+
+
+
 
 
 /* =====================================================
@@ -131,6 +173,20 @@ document.getElementById("btn37").addEventListener("click", function(){pocet_klin
       - Použij Math.random a vlastní pole znaků.
 */
 
+
+
+function Generator(n){
+      const chars = "abcdefghijklmnopqrstuvwxyz123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      let password = "";
+
+      for(let i = 0; i < n; i++){
+            const index = Math.floor(Math.random()*chars.length);
+            password += chars[index];
+      }
+      return password;
+}
+
+
 /* 42) Spočítej faktoriál zadaného čísla.
       - Vytvoř klasickou funkci nebo arrow funkci.
       - Vyzkoušej rekurzi nebo cyklus.
@@ -145,6 +201,29 @@ document.getElementById("btn37").addEventListener("click", function(){pocet_klin
       - Použij setInterval a clearInterval.
       - Funkce musí správně pracovat s proměnnými ve scope.
 */
+
+let interval = null;
+let time = 0;
+
+function startTimer(){
+      if(interval)return;
+      interval = setInterval(() =>{
+            time++;
+            document.getElementById("stopky44").textContent = time;
+      },1000);
+}
+
+
+function stopTimer(){
+      clearInterval(interval);
+      interval = null;
+}
+
+
+function resetTimer(){
+      time = 0;
+      document.getElementById("stopky44").textContent = time;
+}
 
 /* 45) Simuluj hod kostkou (1–6).
       - Funkce vrací náhodné číslo 1–6.
