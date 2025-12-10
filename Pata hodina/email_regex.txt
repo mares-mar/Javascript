@@ -1,0 +1,7 @@
+([\w+-]\.?)+@[a-z.-]+\.[a-zA-Z]{2,5}
+
+const reg = ([\w+-]\.?)+@[a-z.-]+\.[a-zA-Z]{2,5}
+
+var res = "String".match(reg) -> vrátí false když bude mail dobrý tak true
+
+var neu = regex.replace(reg,"nová hodnota")
